@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import plotly.express as px
 
 st.title('Video Game Sales')
@@ -9,14 +8,15 @@ st.title('Video Game Sales')
 df = pd.read_csv('Video_Games_Sales_as_at_22_Dec_2016.csv')
 
 # 3D scatterplot of sales in 3 regions
-st.subheader("3D scatterplot of sales in 3 regions")
+st.subheader("Video Games Sales in NA, EU and JP")
 st.write(
 '''
-The 3D scatterplot below visualizes the distribution of sales of games with release date from 1985 to 2016. 
+The 3D scatterplot below visualizes the distribution of video games sales with release date from 1985 to 2016. 
 Each dot in the 3D space represents a game, and the x, y and z axis represent its sales in NA, EU and JP.
 The color of the dot represents the year of release of the game.
 '''
 )
+
 fig = px.scatter_3d(
                 data_frame=df,
                 x="NA_Sales",
@@ -29,10 +29,12 @@ fig = px.scatter_3d(
 st.plotly_chart(fig, use_container_width=True)
 
 # bar chart of sales over years
-st.subheader("Sales of over years")
+st.subheader("Video Games Sales from 1980 to 2016")
 st.write(
 '''
-The bar chart below shows the average and sum of video game sales over years.
+The bar chart below shows the video game sales from 1980 to 2016.
+There are 2 options for the visualization: average sales or total sales.
+User could see the trend of sales over the years and compare the sales by region.
 '''
 )
 
@@ -50,26 +52,26 @@ fig = px.histogram(
     data_frame=df,
     x="Year_of_Release",
     y=selected_region,
-    title="Sum of Sales by Years",
+    title=histo_type + " of Sales by Years",
     histfunc=func,
 )
 
 st.plotly_chart(fig, use_container_width=True)
 
 # 2D scatterplot of ratings vs. sales
-st.subheader("scatterplot of ratings vs. sales")
+st.subheader("Video Games Sales vs. Ratings")
 st.write(
 '''
 The 2D scatterplot below visualizes video games sales and ratings from 1985 to 2016.
-User could select the games which they want to examine by selecting the year of release.
-They can also choose the score type, sale by region, and game platfroms to visualize.
+User could select the year of release, rating score type, and sales by region they want to examine.
+They can also choose the games of specific platforms.
 '''
 )
 df = df.dropna()
 
 years = df['Year_of_Release'].unique().astype(int)
 years = years.tolist()
-year = st.slider('Select a Year', min(years), max(years), 2015)
+year = st.slider('Select a Year', min(years), max(years), 2007)
 st.write("Sales and ratings in: ", year)
 
 score_type = st.selectbox('Score Type:', ('Critic_Score', 'User_Score'))
@@ -79,7 +81,7 @@ sale_region = st.selectbox('Sales by Region', ('NA_Sales', 'EU_Sales', 'JP_Sales
 st.write('Selected Sale Region: ', sale_region)
 
 platforms = df['Platform'].unique().tolist()
-platform = st.multiselect('Platform(s): ', platforms, ['PS4', 'XOne'], key=0)
+platform = st.multiselect('Platform(s): ', platforms, ['PS3', 'X360'], key=0)
 st.write('Selected Platform(s): ', platform)
 
 cur_dataset =  df.loc[df['Year_of_Release'] == year]
@@ -92,16 +94,17 @@ fig = px.scatter(
     x=sale_region,
     y=score_type,
     color="Platform",
-    title="Game Sales vs. Ratings",
+    title="Video Games Sales vs. Ratings",
 )
 
 st.plotly_chart(fig, use_container_width=True)
 
 # 2D scatterplot of sales vs. year of release (different genres)
-st.subheader("Genre vs. Sales")
+st.subheader("Video Games Sales of Different Genres")
 st.write(
 '''
-This 2D scatterplot visualizes sales of games of different genres over years.
+This 2D scatterplot visualizes video games sales of different genres over years.
+User could select the game genres they want to examine and compare the sales between different genres.
 '''
 )
 
@@ -118,8 +121,7 @@ fig = px.scatter(
     x="Year_of_Release",
     y=sale_region,
     color="Genre",
-    title="Game Sales and Genres",
+    title="Sales of Games of Different Genres",
 )
 st.plotly_chart(fig, use_container_width=True)
-
 
