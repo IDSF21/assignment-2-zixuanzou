@@ -8,10 +8,10 @@ st.title('Video Game Sales')
 df = pd.read_csv('Video_Games_Sales_as_at_22_Dec_2016.csv')
 
 # 3D scatterplot of sales in 3 regions
-st.subheader("Video Games Sales in NA, EU and JP")
+st.subheader("Video Game Sales in NA, EU and JP")
 st.write(
 '''
-The 3D scatterplot below visualizes the distribution of video games sales with release date from 1985 to 2016. 
+The 3D scatterplot below visualizes the distribution of video game sales with release date from 1985 to 2016. 
 Each dot in the 3D space represents a game, and the x, y and z axis represent its sales in NA, EU and JP.
 The color of the dot represents the year of release of the game.
 '''
@@ -29,7 +29,7 @@ fig = px.scatter_3d(
 st.plotly_chart(fig, use_container_width=True)
 
 # bar chart of sales over years
-st.subheader("Video Games Sales from 1980 to 2016")
+st.subheader("Video Game Sales from 1980 to 2016")
 st.write(
 '''
 The bar chart below shows the video game sales from 1980 to 2016.
@@ -59,10 +59,10 @@ fig = px.histogram(
 st.plotly_chart(fig, use_container_width=True)
 
 # 2D scatterplot of ratings vs. sales
-st.subheader("Video Games Sales vs. Ratings")
+st.subheader("Video Game Sales vs. Ratings")
 st.write(
 '''
-The 2D scatterplot below visualizes video games sales and ratings from 1985 to 2016.
+The 2D scatterplot below visualizes video game sales and ratings from 1985 to 2016.
 User could select the year of release, rating score type, and sales by region they want to examine.
 They can also choose the games of specific platforms.
 '''
@@ -94,16 +94,16 @@ fig = px.scatter(
     x=sale_region,
     y=score_type,
     color="Platform",
-    title="Video Games Sales vs. Ratings",
+    title="Video Game Sales vs. Ratings",
 )
 
 st.plotly_chart(fig, use_container_width=True)
 
 # 2D scatterplot of sales vs. year of release (different genres)
-st.subheader("Video Games Sales of Different Genres")
+st.subheader("Video Game Sales of Different Genres")
 st.write(
 '''
-This 2D scatterplot visualizes video games sales of different genres over years.
+This 2D scatterplot visualizes video game sales of different genres over years.
 User could select the game genres they want to examine and compare the sales between different genres.
 '''
 )
