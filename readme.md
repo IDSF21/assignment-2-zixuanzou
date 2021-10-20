@@ -12,6 +12,8 @@ Are the trends of sales similar across different regions?
 
 Users should be able to answer these questions by exploring this interactive application.
 
+Link to the application: https://share.streamlit.io/idsf21/assignment-2-zixuanzou/main/video_game_sales.py
+
 
 ## Design Decisions
 
