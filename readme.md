@@ -60,11 +60,14 @@ The 2D scatterplot visualizes video games sales and ratings from 1985 to 2016.
 User could select the year of release, rating score type, and region they want to examine.
 They can also choose the games of specific platforms.
 
+Note: the game rating data is missing for some years in the 80s.
+
 I added this plot becuase users could get a lot of insights on the game sales by utilizing the interactive features.
 Users can select the subset of data they want to examine by chooing the year, score type, platform and region, 
 which allows them to analysis and compare the data more easily.
 Initially I did not add the platform selection to the plot, but later I realized that platform also plays an essential part in game sales.
 By adding that to the plot, users could also see and compare the game sales on consoles of different generations.
+
 
 **2D Scatterplot of Game Sales of Different Genres**
 
