@@ -47,7 +47,7 @@ histo_type = st.selectbox('Histogram Function', ('Average', 'Sum'), key=0)
 st.write('Selected Histogram Function: ', histo_type)
 func = "avg" if (histo_type == "Average") else "sum"
 
-selected_region = st.selectbox('Sales by Region', ('NA_Sales', 'EU_Sales', 'JP_Sales', 'Global_Sales'), key=1)
+selected_region = st.selectbox('Region', ('NA_Sales', 'EU_Sales', 'JP_Sales', 'Global_Sales'), key=1)
 st.write('Selected Sale Region: ', selected_region)
 
 fig = px.histogram(
@@ -79,7 +79,7 @@ st.write("Sales and ratings in: ", year)
 score_type = st.selectbox('Score Type:', ('Critic_Score', 'User_Score'))
 st.write('Selected Score Type: ', score_type)
 
-sale_region = st.selectbox('Sales by Region', ('NA_Sales', 'EU_Sales', 'JP_Sales', 'Global_Sales'), key=2)
+sale_region = st.selectbox('Region', ('NA_Sales', 'EU_Sales', 'JP_Sales', 'Global_Sales'), key=2)
 st.write('Selected Sale Region: ', sale_region)
 
 platforms = df['Platform'].unique().tolist()
@@ -106,11 +106,11 @@ st.subheader("Video Game Sales of Different Genres")
 st.write(
 '''
 This 2D scatterplot visualizes video game sales of different genres over years.
-You select the game genres you want to examine and compare the sales between different genres.
+You can select the game genres you want to examine and compare the sales between different genres.
 '''
 )
 
-sale_region = st.selectbox('Sales by Region', ('NA_Sales', 'EU_Sales', 'JP_Sales', 'Global_Sales'), key=3)
+sale_region = st.selectbox('Region', ('NA_Sales', 'EU_Sales', 'JP_Sales', 'Global_Sales'), key=3)
 st.write('Selected Sale Region: ', sale_region)
 
 genres = df['Genre'].unique().tolist()
