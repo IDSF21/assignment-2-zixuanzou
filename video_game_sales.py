@@ -11,7 +11,7 @@ df = pd.read_csv('Video_Games_Sales_as_at_22_Dec_2016.csv')
 st.subheader("Video Game Sales in NA, EU and JP")
 st.write(
 '''
-The 3D scatterplot below visualizes the distribution of video game sales with release date from 1980 to 2016. 
+The 3D scatterplot below visualizes the distribution of video game sales from 1980 to 2020. 
 Each dot in the 3D space represents a game, and the x, y and z axis represent its sales in NA, EU and JP.
 The color of the dot represents the year of release of the game.
 '''
