@@ -79,7 +79,7 @@ I worked solo on this project.
 I spent about 12 hours on this - about 1 hour choosing a dataset, 1 hour thinking about the question to answer, 
 2 hours for the writeup and deployment, and the rest of the time cleaning up the dataset and implementing the application.
 
-Performing the EDA and deciding between visualization/graph choices took me the most time. 
+Performing the EDA, deciding between visualization/graph choices and implementing these visualizations took me the most time. 
 I needed to think about how to use the graphs and plots to convey meaningful information and answer the questions.
 I also spent some time exploring Streamlit and different plotting libraries.
 At the beginning I used Matplotlib for visualization, 
