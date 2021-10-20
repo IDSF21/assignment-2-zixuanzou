@@ -2,7 +2,7 @@
 The goal of this interactive data science application is to explore the video game sales from 1980 to 2016.
 It allows the users to examine the trend of video games sales from different perspectives.
 
-Users will be able to answer the question "How are video game sales affected by various factors?"
+The goal is to enable users to answer this question: "How are video game sales affected by various factors?"
 
 This question could be divided to several sub-questions: 
 Do newer games have higher sales? 
