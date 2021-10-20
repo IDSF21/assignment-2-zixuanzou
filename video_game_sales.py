@@ -123,5 +123,8 @@ fig = px.scatter(
     color="Genre",
     title="Sales of Games of Different Genres",
 )
+
 st.plotly_chart(fig, use_container_width=True)
 
+st.write("Dataset: https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings")
+st.write("Github repo: https://github.com/IDSF21/assignment-2-zixuanzou")
