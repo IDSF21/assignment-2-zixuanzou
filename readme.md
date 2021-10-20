@@ -1,20 +1,26 @@
 ## Project Goals
 The goal of this interactive data science application is to explore the video game sales from 1980 to 2016.
 It allows the users to examine the trend of video games sales from different perspectives.
+
 Users will be able to answer the question "How are video game sales affected by various factors?"
+This question could be divided to several sub-questions: 
+Do newer games have higher sales? 
+What genre of games have highest sales?
+How are the sales and ratings related?
+Are the trends of sales similar across different regions?
 
 
 ## Design Decisions
 
-**Dataset Slection**
+**Dataset Selection**
 
 The dataset I used for this project is from Kaggle [Link](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings).
 
-It contains the data of about 17k games.
+It contains the data of about 17k games released from 1980 to 2016.
 I chose this dataset because it includes data from many different aspects: realease year, ratings, genre, platform, etc.
 We need all these factors to analyze the trend of game sales.
 
-For this dataset, I did not perform data deduplication on game names, but there are games that have been released on multiple platforms.
+For this dataset, I did not perform data deduplication on game names, because there are games that have been released on multiple platforms.
 For example, The Last of Us has been released on both PS3 and PS4.
 
 **3D Scatterplot of Video Game Sales in NA, EU and JP**
