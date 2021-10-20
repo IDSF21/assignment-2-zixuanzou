@@ -5,6 +5,8 @@ import plotly.express as px
 
 st.title('Video Game Sales')
 
+st.write("How are video games sales affected by various factors?")
+
 df = pd.read_csv('Video_Games_Sales_as_at_22_Dec_2016.csv')
 
 # 3D scatterplot of sales in 3 regions
@@ -34,7 +36,7 @@ st.write(
 '''
 The bar chart below shows the video game sales from 1980 to 2016.
 There are 2 options for the visualization: average sales or total sales.
-User could see the trend of sales over the years and compare the sales by region.
+You can see the trend of sales over the years and compare the sales by region.
 '''
 )
 
@@ -63,8 +65,8 @@ st.subheader("Video Game Sales vs. Ratings")
 st.write(
 '''
 The 2D scatterplot below visualizes video game sales and ratings from 1985 to 2016.
-User could select the year of release, rating score type, and sales by region they want to examine.
-They can also choose the games of specific platforms.
+You can select the year of release, rating score type, and region you want to examine.
+You can also choose the games of specific platforms.
 '''
 )
 df = df.dropna()
@@ -104,7 +106,7 @@ st.subheader("Video Game Sales of Different Genres")
 st.write(
 '''
 This 2D scatterplot visualizes video game sales of different genres over years.
-User could select the game genres they want to examine and compare the sales between different genres.
+You select the game genres you want to examine and compare the sales between different genres.
 '''
 )
 
